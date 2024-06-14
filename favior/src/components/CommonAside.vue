@@ -94,7 +94,7 @@ export default {
     },
     switchMenu(item){
       console.log(item);
-      if (item.path !== this.$route.path){
+      if (item.path !== this.$route.path && !(item.path === '/' && this.$route.path === '/home')){
         this.$router.push(item.path);
       }
       
