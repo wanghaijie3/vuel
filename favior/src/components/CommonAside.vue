@@ -3,7 +3,7 @@
     :collapse="isCollapse" background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b">
-      <h3>通用后台管理系统</h3>
+      <h3>{{ isCollapse ? '后台':'通用后台管理系统'}}</h3>
     <el-menu-item @click="switchMenu(item)" v-for="item in noChildren" :key="item.path" :index="item.path">
       <i :class="`el-icon-${item.icon}`"></i>
       <span slot="title">{{ item.label }}</span>
@@ -45,7 +45,6 @@ import { computed } from 'vue';
 export default {
   data() {
     return {
-      isCollapse: false,
       menuData: [
         {
           path: '/',
@@ -107,7 +106,16 @@ export default {
     },
     hasChildren(){
       return this.menuData.filter(item => item.children)
+    },
+    isCollapse(){
+      return this.$store.state.tab.isCollapse;
     }
   }
 }
 </script>
+
+<style scoped>
+  .el-menu-vertical-demo {
+    border-right: 0;
+  }
+</style>
