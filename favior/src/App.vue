@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style lang="less">
-  body,html,h3{
+  body,html,h3,p{
     padding: 0;
     margin: 0;
   }

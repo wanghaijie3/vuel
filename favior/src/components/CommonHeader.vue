@@ -7,7 +7,7 @@
         <div class="r-content">
             <el-dropdown>
                 <span class="el-dropdown-link">
-                    <img class="img-style" src="../assets/images/logo.png" >
+                    <img class="img-style" src="../assets/images/user.jpg" >
                 </span>
                 <el-dropdown-menu slot="dropdown">
                     <el-dropdown-item>个人中心</el-dropdown-item>
